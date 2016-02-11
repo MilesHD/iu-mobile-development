@@ -123,3 +123,20 @@ input, select, textarea {
 input[type='checkbox'] {
     display: inline;
 }
+
+span {
+    display: none;
+}
+
+form div {
+    display: none;
+}
+
+.invalid-email, .invalid-phone {
+    color: red;
+    display: inline;
+}
+
+.visible {
+    display: block;
+}
