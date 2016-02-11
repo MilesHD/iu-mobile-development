@@ -63,32 +63,50 @@ nav {
     text-align: center;
 }
 
-.itlp-kelley-image {
-    width: 100%;
+.invalid-email, .invalid-phone {
+    color: red;
+    display: inline;
 }
 
+video, .itlp-kelley-image {
+    width: 100%;
+}
 
 .logo {
     display: block;
     margin: 0 auto;    
 }
 
-.search-form {
-    
-}
 .search-results {
     padding: 15px 10px;
     background: white;
 }
 
-/* Tablet and Desktop Devices */
+#contact label {
+    margin-top: 30px;
+}
+
+label span {
+    display: none;
+}
+
+#submit-contact-form {
+    margin-top: 30px;
+}
+
+.visible {
+    display: block;
+}
+
+
+/* Larger Smart-Phone and Tablet Devices */
 @media screen and (min-width: 321px) {
     label {
         display: inline;
     }
 }
 
-/* Tablet and Desktop Devices */
+/* Desktop Devices */
 @media screen and (min-width: 800px) {
     .ui-content {
         width: 800px;
