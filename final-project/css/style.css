@@ -1,0 +1,37 @@
+/* Mobile */
+
+/* Override jquery-mobile defaults */
+.ui-page-theme-a .ui-bar-inherit {
+    background-color: #3A5BA0;
+    text-shadow: none;
+    color: white;
+}
+
+/* Welcome */
+#welcome img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* About */
+#map-canvas {
+    height: 500px;
+}
+
+/* Validation Error Helpers */
+/*label span {*/
+    /*display: none;*/
+/*}*/
+
+/*.visible {*/
+    /*display: block;*/
+/*}*/
+
+
+/* Larger Smart-Phone and Tablet Devices */
+@media screen and (min-width: 321px) {
+}
+
+/* Desktop Devices */
+@media screen and (min-width: 800px) {
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aviation ITLP</title>
+    <link rel="stylesheet" href="css/jquery-mobile.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <!-- Welcome -->
+    <section id="welcome" data-role="page">
+        <div data-role="header">
+            <div>
+                <span class="ui-title">Welcome</h1>
+            </div>
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#welcome" data-transition="slide">Welcome</a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="slide">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="slide">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ui-content" role="main">
+            <img src="http://placehold.it/250x250">
+            <h1>Welcome to GE Aviation ITLP</h1>
+            <p>
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+                This is my text. This is my text. This is my text. This is my text.
+            </p>
+        </div>
+        <div data-role="footer">
+            <h2>&copy; 2016 GE AVIATION </h2>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" data-role="page">
+        <div data-role="header">
+            <div>
+                <span class="ui-title">About ITLP</h1>
+            </div>
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#welcome" data-transition="slide">Welcome</a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="slide">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="slide">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ui-content" role="main">
+            <h2>What is ITLP Anyway?</h2>
+            <p>What's there to say? It's the single best thing you can ever
+               hope to do for your IT career. In this digital world, technology
+               is shaping every aspect of every profession. GE is at the forefront of
+               this change and you, you! have the opportunity to be part of the movement.
+            </p>
+            <h2>Where are we?</h2>
+            <p>We have several offices in the greater Cincinnati area. Won't you come and join us!</p>
+            <div id="map-canvas"></div>
+        </div>
+        <div data-role="footer">
+            <h2>&copy; 2016 GE AVIATION </h2>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" data-role="page">
+        <div data-role="header">
+            <div>
+                <span class="ui-title">Contact</h1>
+            </div>
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#welcome" data-transition="slide">Welcome</a>
+                    </li>
+                    <li>
+                        <a href="#about" data-transition="slide">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-transition="slide">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ui-content" role="main">
+            <h1>Contact</h1>
+            <form>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+
+                <div class="contact-method email">
+                    <label for="email">Email Address <span id="invalid-email"> Please enter a valid email address</span></label>
+                    <input type="email" name="email" placeholder="Email Address">
+                </div>
+
+                <label for="date-of-birth">Date of Birth</label>
+                <input type="date" data-role="date">
+
+                <button id="submit-contact-form">Submit</button>
+            </form>
+        </div>
+        <div data-role="footer">
+            <h2>&copy; 2016 GE AVIATION </h2>
+        </div>
+    </section>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery-mobile.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-wjst1ul957z2xrdfG6o_dY5KSQK0qf4">
+    </script>
+    <script src="js/contact.js"></script>
+    <script src="js/google-maps.js"></script>
+</body>
+</html>
