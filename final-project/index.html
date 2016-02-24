@@ -30,21 +30,18 @@
             </div>
         </div>
         <div class="ui-content" role="main">
-            <img src="http://placehold.it/250x250">
-            <h1>Welcome to GE Aviation ITLP</h1>
-            <p>
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-                This is my text. This is my text. This is my text. This is my text.
-            </p>
+            <img class="welcome-image" src="img/welcome_250.png">
+            <div class="welcome-content">
+                <h1>Welcome to GE Aviation ITLP</h1>
+                <p>If...</p>
+                <ul>
+                    <li>Working on the cutting edge of digital industry</li>
+                    <li>Exposure to upper management and senior GE Leaders</li>
+                    <li>Face to Face and virtual training throughout duration of the program</li>
+                    <li>Opportunities to build a global network of ITLP members across all of GE's businesses</li>
+                </ul>
+                <p>...sounds good to you. Then you've come to the right place.</p>
+            </div>
         </div>
         <div data-role="footer">
             <h2>&copy; 2016 GE AVIATION </h2>
@@ -72,11 +69,9 @@
             </div>
         </div>
         <div class="ui-content" role="main">
-            <h2>What is ITLP Anyway?</h2>
-            <p>What's there to say? It's the single best thing you can ever
-               hope to do for your IT career. In this digital world, technology
-               is shaping every aspect of every profession. GE is at the forefront of
-               this change and you, you! have the opportunity to be part of the movement.
+            <h2>What is ITLP?</h2>
+            <p>
+                The Information Technology Leadership Program offers those with a passion for technology the opportunity to grow their leadership skills, business acumen and technology aptitude, while building a career with unlimited potential. ITLP is a two-year program with four rotational job assignments focused on top GE IT initiatives. Program members lead by doing - gaining real-world experience by working on important and challenging projects alongside some of the brightest minds in the world. Each program member is guaranteed to work outside of their home country. In addition, each member has the opportunity to complete 15 Master credits with Indiana University in the fields of IT and business.
             </p>
             <h2>Where are we?</h2>
             <p>We have several offices in the greater Cincinnati area. Won't you come and join us!</p>
@@ -107,21 +102,27 @@
                 </ul>
             </div>
         </div>
-        <div class="ui-content" role="main">
-            <h1>Contact</h1>
+        <div class="ui-content contact" role="main">
             <form>
-                <div>
-                    <label for="name">Name</label>
+                <div class="form-control">
+                    <label for="name">Name* <span id="invalid-name"> Please enter your name</span></label>
                     <input type="text" name="name" placeholder="Name">
                 </div>
 
-                <div class="contact-method email">
-                    <label for="email">Email Address <span id="invalid-email"> Please enter a valid email address</span></label>
+                <div class="form-control">
+                    <label for="email">Email Address* <span id="invalid-email"> Please enter a valid email address</span></label>
                     <input type="email" name="email" placeholder="Email Address">
                 </div>
 
-                <label for="date-of-birth">Date of Birth</label>
-                <input type="date" data-role="date">
+                <div class="form-control">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input type="date" data-role="date">
+                </div>
+
+                <div class="form-control">
+                    <label for="comments">Comments and Questions* <span id="invalid-comments"> What are you trying to say?</span></label>
+                    <textarea name="comments" placeholder="Comments and Questions"></textarea>
+                </div>
 
                 <button id="submit-contact-form">Submit</button>
             </form>
@@ -132,6 +133,7 @@
     </section>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/jquery-mobile.js"></script>
+    <script src="js/jquery.storage.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-wjst1ul957z2xrdfG6o_dY5KSQK0qf4">
     </script>
     <script src="js/contact.js"></script>

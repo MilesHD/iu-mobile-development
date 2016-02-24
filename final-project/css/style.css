@@ -8,9 +8,12 @@
 }
 
 /* Welcome */
-#welcome img {
+.welcome-image {
     display: block;
     margin: 0 auto;
+}
+.welcome-content h1 {
+    text-align: center;
 }
 
 /* About */
@@ -18,15 +21,20 @@
     height: 500px;
 }
 
+/* Contact */
+.contact .form-control  {
+    margin: 25px 0;
+}
+
 /* Validation Error Helpers */
-/*label span {*/
-    /*display: none;*/
-/*}*/
+.contact label span {
+    display: none;
+}
 
-/*.visible {*/
-    /*display: block;*/
-/*}*/
-
+.contact label span.invalid {
+    display: inline;
+    color: red;
+}
 
 /* Larger Smart-Phone and Tablet Devices */
 @media screen and (min-width: 321px) {
@@ -34,4 +42,15 @@
 
 /* Desktop Devices */
 @media screen and (min-width: 800px) {
+    /* Welcome */
+    .welcome-image {
+        float: left;
+    }
+    .welcome-content {
+        float: right;
+        width: 475px;
+    }
+    .welcome-content h1 {
+        text-align: left;
+    }
 }

@@ -1,29 +1,57 @@
 $(document).ready(function() {
     'use strict';
+    var storedName = $.localStorage.get("name");
+    var storedEmail = $.localStorage.get("email");
+
+    if (storedName) {
+        $('input[name=name]').val(storedName);
+    }
+
+    if (storedEmail) {
+        $('input[name=email]').val(storedEmail);
+    }
 
     function submitContactForm(evt) {
         evt.preventDefault();
 
         var emailRegex = /[A-Z0-9]+@[A-Z0-9]+\.[A-Z]{2,4}/gi;
-        var phoneRegex = /[0-9]{3}-[0-9]{3}-[0-9]{4}/g;
 
-        var emailInput = document.querySelector('input[name=email]').value;
-        var phoneInput = document.querySelector('input[name=phone]').value;
+        var nameInput = $('input[name=name]').val().trim();
+        var emailInput = $('input[name=email]').val().trim();
+        var commentsInput = $('textarea[name=comments]').val().trim();
 
         var validEmail = emailRegex.test(emailInput);
-        var validPhone = phoneRegex.test(phoneInput);
+
+        if (!nameInput || nameInput === "") {
+            $('label[for=name] span').addClass('invalid');
+            return false;
+        } else {
+            $('label[for=name] span').removeClass('invalid');
+        }
 
         if (!validEmail) {
-            $('label[for=email] span').addClass('invalid-email');
+            $('label[for=email] span').addClass('invalid');
+            return false;
         } else {
-            $('label[for=email] span').removeClass('invalid-email');
+            $('label[for=email] span').removeClass('invalid');
         }
 
-        if (!validPhone) {
-            $('label[for=phone] span').addClass('invalid-phone');
+        if (!commentsInput || commentsInput === "") {
+            $('label[for=comments] span').addClass('invalid');
+            return false;
         } else {
-            $('label[for=phone] span').removeClass('invalid-phone');
+            $('label[for=comments] span').removeClass('invalid');
         }
+
+        alert("Message Received! We will be in touch shortly!");
+
+        // Save user details in localStorage
+        $.localStorage.set("name", nameInput);
+        $.localStorage.set("email", emailInput);
+
+        // Clear comments 
+        $('textarea[name=comments]').val('');
+
     }
 
     function displayContactMethod(selectedMethod) {
